@@ -40,7 +40,23 @@
       });
     }
   </script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
   
+  
+<!--  config pour se connecter à la db Firebase -->
+  <script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyBiBwCN261EaVncp3p_Xq9pLdzaSdieyYM",
+    authDomain: "side-fa491.firebaseapp.com",
+    projectId: "side-fa491",
+    storageBucket: "side-fa491.appspot.com",
+    messagingSenderId: "602488618511",
+    appId: "1:602488618511:web:d1c760a8642a77be412d7a"
+  }
+    firebase.initializeApp(firebaseConfig);
+  </script>
   
   <script src="main.dart.js" type="application/javascript"></script>
 </body>
