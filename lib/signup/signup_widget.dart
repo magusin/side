@@ -88,29 +88,11 @@ class _SignupWidgetState extends State<SignupWidget> {
                               fontFamily: 'Poppins',
                               fontSize: 16,
                             ),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                            ),
+                            enabledBorder: InputBorder.none,
+                            focusedBorder: InputBorder.none,
                             filled: true,
                             contentPadding:
-                                EdgeInsetsDirectional.fromSTEB(10, 60, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(10, 30, 0, 30),
                           ),
                           style: FlutterFlowTheme.bodyText1.override(
                             fontFamily: 'Poppins',
@@ -134,29 +116,11 @@ class _SignupWidgetState extends State<SignupWidget> {
                               fontFamily: 'Poppins',
                               fontSize: 16,
                             ),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                            ),
+                            enabledBorder: InputBorder.none,
+                            focusedBorder: InputBorder.none,
                             filled: true,
                             contentPadding:
-                                EdgeInsetsDirectional.fromSTEB(10, 60, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(10, 30, 0, 30),
                           ),
                           style: FlutterFlowTheme.bodyText1.override(
                             fontFamily: 'Poppins',
@@ -181,29 +145,11 @@ class _SignupWidgetState extends State<SignupWidget> {
                               fontFamily: 'Poppins',
                               fontSize: 16,
                             ),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                            ),
+                            enabledBorder: InputBorder.none,
+                            focusedBorder: InputBorder.none,
                             filled: true,
                             contentPadding:
-                                EdgeInsetsDirectional.fromSTEB(0, 60, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
                           ),
                           style: FlutterFlowTheme.bodyText1.override(
                             fontFamily: 'Poppins',
@@ -229,29 +175,11 @@ class _SignupWidgetState extends State<SignupWidget> {
                               fontFamily: 'Poppins',
                               fontSize: 16,
                             ),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                            ),
+                            enabledBorder: InputBorder.none,
+                            focusedBorder: InputBorder.none,
                             filled: true,
                             contentPadding:
-                                EdgeInsetsDirectional.fromSTEB(10, 60, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(10, 30, 0, 30),
                           ),
                           style: FlutterFlowTheme.bodyText1.override(
                             fontFamily: 'Poppins',
@@ -275,29 +203,11 @@ class _SignupWidgetState extends State<SignupWidget> {
                               fontFamily: 'Poppins',
                               fontSize: 16,
                             ),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                            ),
+                            enabledBorder: InputBorder.none,
+                            focusedBorder: InputBorder.none,
                             filled: true,
                             contentPadding:
-                                EdgeInsetsDirectional.fromSTEB(10, 60, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(10, 30, 0, 30),
                           ),
                           style: FlutterFlowTheme.bodyText1.override(
                             fontFamily: 'Poppins',
@@ -324,29 +234,11 @@ class _SignupWidgetState extends State<SignupWidget> {
                               fontSize: 16,
                               fontWeight: FontWeight.normal,
                             ),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                            ),
+                            enabledBorder: InputBorder.none,
+                            focusedBorder: InputBorder.none,
                             filled: true,
                             contentPadding:
-                                EdgeInsetsDirectional.fromSTEB(10, 60, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(10, 30, 0, 30),
                             suffixIcon: InkWell(
                               onTap: () => setState(
                                 () => passwordVisibility = !passwordVisibility,
@@ -385,29 +277,11 @@ class _SignupWidgetState extends State<SignupWidget> {
                               fontSize: 16,
                               fontWeight: FontWeight.normal,
                             ),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                            ),
+                            enabledBorder: InputBorder.none,
+                            focusedBorder: InputBorder.none,
                             filled: true,
                             contentPadding:
-                                EdgeInsetsDirectional.fromSTEB(10, 60, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(10, 30, 0, 30),
                             suffixIcon: InkWell(
                               onTap: () => setState(
                                 () =>
@@ -516,7 +390,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                     if (!formKey.currentState.validate()) {
                       return;
                     }
-                 
+
                     if ((passwordController.text) ==
                         (password2Controller.text)) {
                       if (passwordController.text != password2Controller.text) {
@@ -545,22 +419,21 @@ class _SignupWidgetState extends State<SignupWidget> {
                         email: emailController.text,
                         dateDeNaisance: int.parse(birthController.text),
                         numeroDeTelephone: int.parse(phoneController.text),
-                        motDePasse: passwordController.text,
                       );
                       await UserRecord.collection
                           .doc(user.uid)
                           .update(userCreateData);
-
-                      await Navigator.pushAndRemoveUntil(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SignupE1Widget(),
-                        ),
-                        (r) => false,
-                      );
                     }
+                    await Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.bottomToTop,
+                        duration: Duration(milliseconds: 10),
+                        reverseDuration: Duration(milliseconds: 10),
+                        child: SignupE1Widget(),
+                      ),
+                    );
                   },
-                  
                   text: 'S\'inscrire',
                   options: FFButtonOptions(
                     width: double.infinity,

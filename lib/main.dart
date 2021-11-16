@@ -7,7 +7,7 @@ import 'auth/auth_util.dart';
 
 import '../flutter_flow/flutter_flow_theme.dart';
 import 'package:side/home_page/home_page_widget.dart';
-import 'package:side/signup_e1/signup_e1_widget.dart';
+import 'package:side/sign_home_page/sign_home_page_widget.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 
 void main() async {
@@ -63,7 +63,7 @@ class _MyAppState extends State<MyApp> {
               ),
             )
           : currentUser.loggedIn
-              ? SignupE1Widget()
+              ? SignHomePageWidget()
               : HomePageWidget(),
     );
   }
