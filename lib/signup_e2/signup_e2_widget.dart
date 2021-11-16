@@ -121,6 +121,9 @@ class _SignupE2WidgetState extends State<SignupE2Widget> {
               ),
               FFButtonWidget(
                 onPressed: () async {
+                    if (!formKey.currentState.validate()) {
+                    return;
+                  }
                   setState(() => _loadingButton = true);
                   try {
                     await Navigator.push(

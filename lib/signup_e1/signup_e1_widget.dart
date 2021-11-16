@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SignupE1Widget extends StatefulWidget {
-    SignupE1Widget({
+  SignupE1Widget({
     Key key,
     this.adresse,
   }) : super(key: key);
@@ -118,6 +118,9 @@ class _SignupE1WidgetState extends State<SignupE1Widget> {
               ),
               FFButtonWidget(
                 onPressed: () async {
+                  if (!formKey.currentState.validate()) {
+                    return;
+                  }
                   setState(() => _loadingButton = true);
                   try {
                     await Navigator.push(

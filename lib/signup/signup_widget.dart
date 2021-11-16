@@ -516,6 +516,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                     if (!formKey.currentState.validate()) {
                       return;
                     }
+                 
                     if ((passwordController.text) ==
                         (password2Controller.text)) {
                       if (passwordController.text != password2Controller.text) {
@@ -559,6 +560,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                       );
                     }
                   },
+                  
                   text: 'S\'inscrire',
                   options: FFButtonOptions(
                     width: double.infinity,
