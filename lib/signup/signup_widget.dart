@@ -130,7 +130,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                           keyboardType: TextInputType.name,
                           validator: (val) {
                             if (val.isEmpty) {
-                              return 'Field is required';
+                              return 'Un nom est requis';
                             }
 
                             return null;
@@ -149,7 +149,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                             focusedBorder: InputBorder.none,
                             filled: true,
                             contentPadding:
-                                EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
+                                EdgeInsetsDirectional.fromSTEB(10, 30, 0, 30),
                           ),
                           style: FlutterFlowTheme.bodyText1.override(
                             fontFamily: 'Poppins',
@@ -158,10 +158,10 @@ class _SignupWidgetState extends State<SignupWidget> {
                           keyboardType: TextInputType.number,
                           validator: (val) {
                             if (val.isEmpty) {
-                              return 'Format: jjmmaaaa';
+                              return 'Format: jj/mm/aaaa';
                             }
-                            if (val.length < 8) {
-                              return 'Requires at least 8 characters.';
+                            if (val.length < 10) {
+                              return 'Requires at least 10 characters.';
                             }
                             return null;
                           },

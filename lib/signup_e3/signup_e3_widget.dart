@@ -1,6 +1,7 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../sign_in/sign_in_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -63,8 +64,18 @@ class _SignupE3WidgetState extends State<SignupE3Widget> {
               style: FlutterFlowTheme.bodyText1,
             ),
             FFButtonWidget(
-              onPressed: () {
-                print('Button pressed ...');
+              onPressed: () async {
+                setState(() => _loadingButton = true);
+                try {
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SignInWidget(),
+                    ),
+                  );
+                } finally {
+                  setState(() => _loadingButton = false);
+                }
               },
               text: 'Zappons ceci et passons à la suite',
               options: FFButtonOptions(
