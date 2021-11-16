@@ -516,45 +516,48 @@ class _SignupWidgetState extends State<SignupWidget> {
                     if (!formKey.currentState.validate()) {
                       return;
                     }
-                    if (passwordController.text != password2Controller.text) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text(
-                            "Passwords don't match!",
+                    if ((passwordController.text) ==
+                        (password2Controller.text)) {
+                      if (passwordController.text != password2Controller.text) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(
+                              "Passwords don't match!",
+                            ),
                           ),
-                        ),
+                        );
+                        return;
+                      }
+
+                      final user = await createAccountWithEmail(
+                        context,
+                        emailController.text,
+                        passwordController.text,
                       );
-                      return;
+                      if (user == null) {
+                        return;
+                      }
+
+                      final userCreateData = createUserRecordData(
+                        prenom: prenomController.text,
+                        nom: nomController.text,
+                        email: emailController.text,
+                        dateDeNaisance: int.parse(birthController.text),
+                        numeroDeTelephone: int.parse(phoneController.text),
+                        motDePasse: passwordController.text,
+                      );
+                      await UserRecord.collection
+                          .doc(user.uid)
+                          .update(userCreateData);
+
+                      await Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SignupE1Widget(),
+                        ),
+                        (r) => false,
+                      );
                     }
-
-                    final user = await createAccountWithEmail(
-                      context,
-                      emailController.text,
-                      passwordController.text,
-                    );
-                    if (user == null) {
-                      return;
-                    }
-
-                    final userCreateData = createUserRecordData(
-                      prenom: prenomController.text,
-                      nom: nomController.text,
-                      email: emailController.text,
-                      dateDeNaisance: int.parse(birthController.text),
-                      numeroDeTelephone: int.parse(phoneController.text),
-                      motDePasse: passwordController.text,
-                    );
-                    await UserRecord.collection
-                        .doc(user.uid)
-                        .update(userCreateData);
-
-                    await Navigator.pushAndRemoveUntil(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => SignupE1Widget(),
-                      ),
-                      (r) => false,
-                    );
                   },
                   text: 'S\'inscrire',
                   options: FFButtonOptions(

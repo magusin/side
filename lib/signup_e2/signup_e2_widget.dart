@@ -1,23 +1,23 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../signup_e2/signup_e2_widget.dart';
+import '../signup_e3/signup_e3_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SignupE1Widget extends StatefulWidget {
-    SignupE1Widget({
+class SignupE2Widget extends StatefulWidget {
+  SignupE2Widget({
     Key key,
-    this.adresse,
+    this.disponible,
   }) : super(key: key);
 
-  final String adresse;
+  final int disponible;
 
   @override
-  _SignupE1WidgetState createState() => _SignupE1WidgetState();
+  _SignupE2WidgetState createState() => _SignupE2WidgetState();
 }
 
-class _SignupE1WidgetState extends State<SignupE1Widget> {
+class _SignupE2WidgetState extends State<SignupE2Widget> {
   TextEditingController textController;
   bool _loadingButton = false;
   final formKey = GlobalKey<FormState>();
@@ -33,7 +33,6 @@ class _SignupE1WidgetState extends State<SignupE1Widget> {
   Widget build(BuildContext context) {
     return Form(
       key: formKey,
-      autovalidateMode: AutovalidateMode.always,
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Color(0xFFF5F5F5),
@@ -44,7 +43,7 @@ class _SignupE1WidgetState extends State<SignupE1Widget> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
-                'ETAPE 1 SUR 3',
+                'ETAPE 2 SUR 3',
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.bodyText1.override(
                   fontFamily: 'Poppins',
@@ -66,7 +65,7 @@ class _SignupE1WidgetState extends State<SignupE1Widget> {
                 ),
               ),
               Text(
-                'Où habites-tu ?',
+                'Quand es-tu disponible ?',
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.bodyText1.override(
                   fontFamily: 'Poppins',
@@ -75,7 +74,7 @@ class _SignupE1WidgetState extends State<SignupE1Widget> {
                 ),
               ),
               Text(
-                'Nous avons besoin de connaître ton adresse pour te proposer des missions proches de chez toi.',
+                'Nous avons besoin de connaître tes disponibilités pour te proposer des missions qui correspondent à ton agenda.',
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.bodyText1,
               ),
@@ -83,7 +82,9 @@ class _SignupE1WidgetState extends State<SignupE1Widget> {
                 controller: textController,
                 obscureText: false,
                 decoration: InputDecoration(
-                  hintText: 'Votre adresse',
+                  labelText: 'jj/mm/aaaa',
+                  labelStyle: FlutterFlowTheme.bodyText1,
+                  hintText: 'Disponibilités',
                   hintStyle: FlutterFlowTheme.bodyText1,
                   enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(
@@ -110,9 +111,11 @@ class _SignupE1WidgetState extends State<SignupE1Widget> {
                 style: FlutterFlowTheme.bodyText1,
                 validator: (val) {
                   if (val.isEmpty) {
-                    return 'Field is required';
+                    return 'jj/mm/aaaa';
                   }
-
+                  if (val.length < 10) {
+                    return 'Requires at least 10 characters.';
+                  }
                   return null;
                 },
               ),
@@ -123,14 +126,14 @@ class _SignupE1WidgetState extends State<SignupE1Widget> {
                     await Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => SignupE2Widget(),
+                        builder: (context) => SignupE3Widget(),
                       ),
                     );
                   } finally {
                     setState(() => _loadingButton = false);
                   }
                 },
-                text: 'Ajouter mon adresse',
+                text: 'Renseigner mes disponibilités',
                 options: FFButtonOptions(
                   width: 130,
                   height: 40,

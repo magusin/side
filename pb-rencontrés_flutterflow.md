@@ -7,5 +7,11 @@ La database firestore ne semble pas prendre les 0 en début d'int, le mdp est en
 ![img](https://i.imgur.com/0yZpPQk.png)
 
 Solution : ?
-indice: https://firebaseopensource.com/projects/firebase/scrypt/ A voir plus tard
+indice: https://firebaseopensource.com/projects/firebase/scrypt/ 
+
+Le mdp est déjà crypté et enregistré par google, il n'a normalement pas besoin d'être enregistré en bdd.
+
+La checkbox n'est pas comprise dans une condition de validation d'un processus.
+
+L'input renseigné sans la validation par authentification bloque ou ignore son required pour passer à la page suivante.
 

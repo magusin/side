@@ -1,6 +1,7 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../signup/signup_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -20,13 +21,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0xFF479FFD),
+      backgroundColor: FlutterFlowTheme.primaryColor,
       body: SafeArea(
         child: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height * 1,
           decoration: BoxDecoration(
-            color: Color(0xFF479FFD),
+            color: FlutterFlowTheme.primaryColor,
           ),
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -48,10 +49,20 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 10),
                 child: FFButtonWidget(
-                  onPressed: () {
-                    print('Button pressed ...');
+                    onPressed: () async {
+                    setState(() => _loadingButton1 = true);
+                    try {
+                      await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SignupWidget(),
+                        ),
+                      );
+                    } finally {
+                      setState(() => _loadingButton1 = false);
+                    }
                   },
-                  text: 'Button',
+                  text: 'S\'inscrire',
                   options: FFButtonOptions(
                     width: double.infinity,
                     height: 40,
@@ -61,10 +72,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       color: Colors.white,
                     ),
                     borderSide: BorderSide(
-                      color: Colors.transparent,
+                      color: Colors.white,
                       width: 1,
                     ),
-                    borderRadius: 12,
+                     borderRadius: 0,
                   ),
                   loading: _loadingButton1,
                 ),
@@ -75,7 +86,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   onPressed: () {
                     print('Button pressed ...');
                   },
-                  text: 'Button',
+                  text: 'J\'ai déjà un compte',
                   options: FFButtonOptions(
                     width: double.infinity,
                     height: 40,
@@ -85,10 +96,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       color: Colors.white,
                     ),
                     borderSide: BorderSide(
-                      color: Colors.transparent,
+                      color: Colors.white,
                       width: 1,
                     ),
-                    borderRadius: 12,
+                    borderRadius: 0,
                   ),
                   loading: _loadingButton2,
                 ),
