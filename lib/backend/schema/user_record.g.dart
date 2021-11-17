@@ -96,6 +96,13 @@ class _$UserRecordSerializer implements StructuredSerializer<UserRecord> {
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.disponibilite;
+    if (value != null) {
+      result
+        ..add('disponibilite')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
     value = object.reference;
     if (value != null) {
       result
@@ -162,6 +169,10 @@ class _$UserRecordSerializer implements StructuredSerializer<UserRecord> {
           result.dateDeNaissance = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'disponibilite':
+          result.disponibilite = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'Document__Reference__Field':
           result.reference = serializers.deserialize(value,
                   specifiedType: const FullType(
@@ -199,6 +210,8 @@ class _$UserRecord extends UserRecord {
   @override
   final String dateDeNaissance;
   @override
+  final String disponibilite;
+  @override
   final DocumentReference<Object> reference;
 
   factory _$UserRecord([void Function(UserRecordBuilder) updates]) =>
@@ -216,6 +229,7 @@ class _$UserRecord extends UserRecord {
       this.phoneNumber,
       this.displayName,
       this.dateDeNaissance,
+      this.disponibilite,
       this.reference})
       : super._();
 
@@ -241,6 +255,7 @@ class _$UserRecord extends UserRecord {
         phoneNumber == other.phoneNumber &&
         displayName == other.displayName &&
         dateDeNaissance == other.dateDeNaissance &&
+        disponibilite == other.disponibilite &&
         reference == other.reference;
   }
 
@@ -256,17 +271,19 @@ class _$UserRecord extends UserRecord {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc($jc(0, prenom.hashCode),
-                                                nom.hashCode),
-                                            email.hashCode),
-                                        photoUrl.hashCode),
-                                    uid.hashCode),
-                                createdTime.hashCode),
-                            check.hashCode),
-                        adresse.hashCode),
-                    phoneNumber.hashCode),
-                displayName.hashCode),
-            dateDeNaissance.hashCode),
+                                            $jc(
+                                                $jc($jc(0, prenom.hashCode),
+                                                    nom.hashCode),
+                                                email.hashCode),
+                                            photoUrl.hashCode),
+                                        uid.hashCode),
+                                    createdTime.hashCode),
+                                check.hashCode),
+                            adresse.hashCode),
+                        phoneNumber.hashCode),
+                    displayName.hashCode),
+                dateDeNaissance.hashCode),
+            disponibilite.hashCode),
         reference.hashCode));
   }
 
@@ -284,6 +301,7 @@ class _$UserRecord extends UserRecord {
           ..add('phoneNumber', phoneNumber)
           ..add('displayName', displayName)
           ..add('dateDeNaissance', dateDeNaissance)
+          ..add('disponibilite', disponibilite)
           ..add('reference', reference))
         .toString();
   }
@@ -337,6 +355,11 @@ class UserRecordBuilder implements Builder<UserRecord, UserRecordBuilder> {
   set dateDeNaissance(String dateDeNaissance) =>
       _$this._dateDeNaissance = dateDeNaissance;
 
+  String _disponibilite;
+  String get disponibilite => _$this._disponibilite;
+  set disponibilite(String disponibilite) =>
+      _$this._disponibilite = disponibilite;
+
   DocumentReference<Object> _reference;
   DocumentReference<Object> get reference => _$this._reference;
   set reference(DocumentReference<Object> reference) =>
@@ -360,6 +383,7 @@ class UserRecordBuilder implements Builder<UserRecord, UserRecordBuilder> {
       _phoneNumber = $v.phoneNumber;
       _displayName = $v.displayName;
       _dateDeNaissance = $v.dateDeNaissance;
+      _disponibilite = $v.disponibilite;
       _reference = $v.reference;
       _$v = null;
     }
@@ -392,6 +416,7 @@ class UserRecordBuilder implements Builder<UserRecord, UserRecordBuilder> {
             phoneNumber: phoneNumber,
             displayName: displayName,
             dateDeNaissance: dateDeNaissance,
+            disponibilite: disponibilite,
             reference: reference);
     replace(_$result);
     return _$result;

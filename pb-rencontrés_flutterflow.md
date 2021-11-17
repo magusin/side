@@ -8,10 +8,10 @@ La database firestore ne semble pas prendre les 0 en début d'int, le mdp est en
 
 ![img](https://i.imgur.com/0yZpPQk.png)
 
-Solution : ?
 indice: https://firebaseopensource.com/projects/firebase/scrypt/ 
 
-Le mdp est déjà crypté et enregistré par google, il n'a pas besoin d'être enregistré en bdd.
+Solution : Le mdp est déjà crypté et enregistré par google, il n'a pas besoin d'être enregistré en bdd.
+Les éléments de type int passés en string font correctement apparaitre les 0 en début.
 
 //
 
@@ -29,6 +29,19 @@ Test d'authentification avec checkbox et nouvelles données; tout était cassé,
 Dans le doute et vu que c'est actuellement (17/11/21 4:59) fonctionnelle, la checkbox est punie au coin.
 
 //
+
+L'Update Record pour "Disponibilite" ne me proposait pas de prendre la valeur correcte du TextField comme référence et me renvoie un format incorrecte.
+![img](https://i.imgur.com/Y3K04O6.png)
+
+Solution: Erreur de saisis dans FlutterFlow direction FireStore
+![img](https://i.imgur.com/yXVTuZV.png)
+Le Field Type doit être un élément simple et non une liste.
+
+//
+
+
+
+
 
 
 

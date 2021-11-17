@@ -101,7 +101,9 @@ class _SignupE1WidgetState extends State<SignupE1Widget> {
                     controller: textController,
                     obscureText: false,
                     decoration: InputDecoration(
-                      hintText: 'Votre adresse: N°, nom rue, pays',
+                      labelText: 'Votre adresse',
+                      labelStyle: FlutterFlowTheme.bodyText1,
+                      hintText: 'N°, nom rue, pays',
                       hintStyle: FlutterFlowTheme.bodyText1,
                       enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
