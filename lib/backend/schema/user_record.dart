@@ -19,22 +19,6 @@ abstract class UserRecord implements Built<UserRecord, UserRecordBuilder> {
   String get email;
 
   @nullable
-  @BuiltValueField(wireName: 'date-de-naisance')
-  int get dateDeNaisance;
-
-  @nullable
-  @BuiltValueField(wireName: 'numero-de-telephone')
-  int get numeroDeTelephone;
-
-  @nullable
-  @BuiltValueField(wireName: 'mot-de-passe')
-  String get motDePasse;
-
-  @nullable
-  @BuiltValueField(wireName: 'display_name')
-  String get displayName;
-
-  @nullable
   @BuiltValueField(wireName: 'photo_url')
   String get photoUrl;
 
@@ -46,8 +30,22 @@ abstract class UserRecord implements Built<UserRecord, UserRecordBuilder> {
   DateTime get createdTime;
 
   @nullable
+  bool get check;
+
+  @nullable
+  String get adresse;
+
+  @nullable
   @BuiltValueField(wireName: 'phone_number')
   String get phoneNumber;
+
+  @nullable
+  @BuiltValueField(wireName: 'display_name')
+  String get displayName;
+
+  @nullable
+  @BuiltValueField(wireName: 'date_de_naissance')
+  String get dateDeNaissance;
 
   @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
@@ -57,13 +55,13 @@ abstract class UserRecord implements Built<UserRecord, UserRecordBuilder> {
     ..prenom = ''
     ..nom = ''
     ..email = ''
-    ..dateDeNaisance = 0
-    ..numeroDeTelephone = 0
-    ..motDePasse = ''
-    ..displayName = ''
     ..photoUrl = ''
     ..uid = ''
-    ..phoneNumber = '';
+    ..check = false
+    ..adresse = ''
+    ..phoneNumber = ''
+    ..displayName = ''
+    ..dateDeNaissance = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('user');
@@ -85,14 +83,14 @@ Map<String, dynamic> createUserRecordData({
   String prenom,
   String nom,
   String email,
-  int dateDeNaisance,
-  int numeroDeTelephone,
-  String motDePasse,
-  String displayName,
   String photoUrl,
   String uid,
   DateTime createdTime,
+  bool check,
+  String adresse,
   String phoneNumber,
+  String displayName,
+  String dateDeNaissance,
 }) =>
     serializers.toFirestore(
         UserRecord.serializer,
@@ -100,11 +98,11 @@ Map<String, dynamic> createUserRecordData({
           ..prenom = prenom
           ..nom = nom
           ..email = email
-          ..dateDeNaisance = dateDeNaisance
-          ..numeroDeTelephone = numeroDeTelephone
-          ..motDePasse = motDePasse
-          ..displayName = displayName
           ..photoUrl = photoUrl
           ..uid = uid
           ..createdTime = createdTime
-          ..phoneNumber = phoneNumber));
+          ..check = check
+          ..adresse = adresse
+          ..phoneNumber = phoneNumber
+          ..displayName = displayName
+          ..dateDeNaissance = dateDeNaissance));
