@@ -98,7 +98,6 @@ class _SignupWidgetState extends State<SignupWidget> {
                             fontFamily: 'Poppins',
                             fontSize: 16,
                           ),
-                          keyboardType: TextInputType.name,
                           validator: (val) {
                             if (val.isEmpty) {
                               return 'Un prénom est requis';
@@ -127,7 +126,6 @@ class _SignupWidgetState extends State<SignupWidget> {
                             fontSize: 16,
                           ),
                           textAlign: TextAlign.start,
-                          keyboardType: TextInputType.name,
                           validator: (val) {
                             if (val.isEmpty) {
                               return 'Un nom est requis';
@@ -155,7 +153,6 @@ class _SignupWidgetState extends State<SignupWidget> {
                             fontFamily: 'Poppins',
                             fontSize: 16,
                           ),
-                          keyboardType: TextInputType.number,
                           validator: (val) {
                             if (val.isEmpty) {
                               return 'Format: jj/mm/aaaa';

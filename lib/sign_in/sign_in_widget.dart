@@ -2,7 +2,7 @@ import '../auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../sign_home_page/sign_home_page_widget.dart';
+import '../main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -68,7 +68,8 @@ class _SignInWidgetState extends State<SignInWidget> {
                   await Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => SignHomePageWidget(),
+                      builder: (context) =>
+                          NavBarPage(initialPage: 'SignHomePage'),
                     ),
                     (r) => false,
                   );
