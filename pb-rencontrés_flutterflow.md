@@ -33,11 +33,20 @@ Dans le doute et vu que c'est actuellement (17/11/21 4:59) fonctionnelle, la che
 L'Update Record pour "Disponibilite" ne me proposait pas de prendre la valeur correcte du TextField comme référence et me renvoie un format incorrecte.
 ![img](https://i.imgur.com/Y3K04O6.png)
 
-Solution: Erreur de saisis dans FlutterFlow direction FireStore
+Solution: Erreur de saisis dans FlutterFlow, direction FireStore
 ![img](https://i.imgur.com/yXVTuZV.png)
 Le Field Type doit être un élément simple et non une liste.
 
 //
+
+La page profil seconde partie a de l'espace entre les cards.
+Après vérification de tout les paddings possible et rien trouvé j'en déduit que les cards ont un padding naturel.
+
+Solution: Mettre des containers à la place des cards qui ne comportent pas ce problème.
+
+//
+
+
 
 
 

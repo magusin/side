@@ -2,6 +2,7 @@ import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../home_page/home_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -36,7 +37,7 @@ class _ProfilWidgetState extends State<ProfilWidget> {
         final profilUserRecord = snapshot.data;
         return Scaffold(
           key: scaffoldKey,
-          backgroundColor: Color(0xFFF5F5F5),
+          backgroundColor: Color(0xFFEEEEEE),
           body: SafeArea(
             child: SingleChildScrollView(
               child: Column(
@@ -635,9 +636,474 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                   ),
                   Align(
                     alignment: AlignmentDirectional(-0.7, 0),
-                    child: Text(
-                      'MON ESPACE PERSONNEL',
-                      style: FlutterFlowTheme.bodyText1,
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                      child: Text(
+                        'MON ESPACE PERSONNEL',
+                        style: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                          fontSize: 12,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 157,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFEEEEEE),
+                      shape: BoxShape.rectangle,
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 1),
+                          child: Container(
+                            width: MediaQuery.of(context).size.width,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.tertiaryColor,
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      10, 0, 5, 0),
+                                  child: Icon(
+                                    Icons.article_rounded,
+                                    color: FlutterFlowTheme.primaryColor,
+                                    size: 24,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      5, 0, 0, 0),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Mon parcours',
+                                        style:
+                                            FlutterFlowTheme.bodyText1.override(
+                                          fontFamily: 'Poppins',
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                      Text(
+                                        'Formations, Expériences, Certifications',
+                                        style:
+                                            FlutterFlowTheme.bodyText1.override(
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w300,
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Align(
+                                    alignment: AlignmentDirectional(1, 0),
+                                    child: Icon(
+                                      Icons.arrow_right,
+                                      color: Colors.black,
+                                      size: 24,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 1),
+                          child: Container(
+                            width: MediaQuery.of(context).size.width,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.tertiaryColor,
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      10, 0, 5, 0),
+                                  child: Icon(
+                                    Icons.assignment_outlined,
+                                    color: FlutterFlowTheme.primaryColor,
+                                    size: 24,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      5, 0, 0, 0),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Gestion administrative',
+                                        style:
+                                            FlutterFlowTheme.bodyText1.override(
+                                          fontFamily: 'Poppins',
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                      Text(
+                                        'Contrats, paies et acomptes, paiements',
+                                        style:
+                                            FlutterFlowTheme.bodyText1.override(
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w300,
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Align(
+                                    alignment: AlignmentDirectional(1, 0),
+                                    child: Icon(
+                                      Icons.arrow_right,
+                                      color: Colors.black,
+                                      size: 24,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width,
+                          height: 50,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.tertiaryColor,
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(10, 0, 5, 0),
+                                child: Icon(
+                                  Icons.person_pin_circle_outlined,
+                                  color: FlutterFlowTheme.primaryColor,
+                                  size: 24,
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Mon compte',
+                                      style:
+                                          FlutterFlowTheme.bodyText1.override(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Identifiant, mot de passe, coordonnées',
+                                      style:
+                                          FlutterFlowTheme.bodyText1.override(
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.w300,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              Expanded(
+                                child: Align(
+                                  alignment: AlignmentDirectional(1, 0),
+                                  child: Icon(
+                                    Icons.arrow_right,
+                                    color: Colors.black,
+                                    size: 24,
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional(-0.7, 0),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                      child: Text(
+                        'INFORMATIONS LÉGALES',
+                        style: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                          fontSize: 12,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 157,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFEEEEEE),
+                      shape: BoxShape.rectangle,
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 1),
+                          child: Container(
+                            width: MediaQuery.of(context).size.width,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.tertiaryColor,
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      10, 0, 5, 0),
+                                  child: FaIcon(
+                                    FontAwesomeIcons.binoculars,
+                                    color: FlutterFlowTheme.primaryColor,
+                                    size: 24,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      5, 0, 0, 0),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Charte de confidentialité',
+                                        style:
+                                            FlutterFlowTheme.bodyText1.override(
+                                          fontFamily: 'Poppins',
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Align(
+                                    alignment: AlignmentDirectional(1, 0),
+                                    child: Icon(
+                                      Icons.arrow_right,
+                                      color: Colors.black,
+                                      size: 24,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 1),
+                          child: Container(
+                            width: MediaQuery.of(context).size.width,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.tertiaryColor,
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      10, 0, 5, 0),
+                                  child: Icon(
+                                    Icons.receipt,
+                                    color: FlutterFlowTheme.primaryColor,
+                                    size: 24,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      5, 0, 0, 0),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Conditions générales d\'utilisations',
+                                        style:
+                                            FlutterFlowTheme.bodyText1.override(
+                                          fontFamily: 'Poppins',
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Align(
+                                    alignment: AlignmentDirectional(1, 0),
+                                    child: Icon(
+                                      Icons.arrow_right,
+                                      color: Colors.black,
+                                      size: 24,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width,
+                          height: 50,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.tertiaryColor,
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(10, 0, 5, 0),
+                                child: FaIcon(
+                                  FontAwesomeIcons.questionCircle,
+                                  color: FlutterFlowTheme.primaryColor,
+                                  size: 24,
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'FAQ',
+                                      style:
+                                          FlutterFlowTheme.bodyText1.override(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              Expanded(
+                                child: Align(
+                                  alignment: AlignmentDirectional(1, 0),
+                                  child: Icon(
+                                    Icons.arrow_right,
+                                    color: Colors.black,
+                                    size: 24,
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 5),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Text(
+                          'CONNECTÉ AVEC ',
+                          style: FlutterFlowTheme.bodyText1,
+                        ),
+                        Text(
+                          profilUserRecord.email,
+                          style: FlutterFlowTheme.bodyText1,
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.tertiaryColor,
+                    ),
+                    child: InkWell(
+                      onTap: () async {
+                        await signOut();
+                        await Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomePageWidget(),
+                          ),
+                          (r) => false,
+                        );
+                      },
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(10, 0, 5, 0),
+                            child: FaIcon(
+                              FontAwesomeIcons.powerOff,
+                              color: Color(0xFFE71229),
+                              size: 24,
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Se déconnecter',
+                                  style: FlutterFlowTheme.bodyText1.override(
+                                    fontFamily: 'Poppins',
+                                    color: Color(0xFFE71229),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   )
                 ],
