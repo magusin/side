@@ -51,11 +51,16 @@ Indice: https://stackoverflow.com/questions/49480051/flutter-dart-exceptions-cau
 
 Solution: Réarranger la structure, et assigner scroll là où c'est nécessaire même si le scroll n'est pas utile les éléments stretch donne l'erreur sans scroll sous web.
 
+Solution exact: https://docs.flutter.dev/testing/common-errors
+Ca arrive lorsque l'élément enfant cherche à dépasser le parent.
+Ex: Une colonne en stretch mais le container suppérieur à px fixe.
+
 //
 
 Sur la page connexion, la touche tab ne passe pas d'un textfield à l'autre sur web, mais le fait sous android.
 
 Solution: Ca c'est solutionné tout seul xD, ou je n'ai pas vu la solution.
+
 //
 
 Les data n'apparraissent pas dans le profil
@@ -69,6 +74,11 @@ Solution: Mauvais appel query du composant 'Document from Reference' et non 'Que
 ![img](https://i.imgur.com/KfT5y4j.png)
 
 //
+
+
+
+
+
 
 
 

@@ -1,6 +1,7 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../charte_confidentialite/charte_confidentialite_widget.dart';
+import '../compte/compte_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../home_page/home_page_widget.dart';
@@ -637,14 +638,14 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                   ),
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(20, 5, 0, 0),
-                      child: Text(
-                        'MON ESPACE PERSONNEL',
-                        style: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Poppins',
-                          fontSize: 12,
-                        ),
+                    child: Text(
+                      'MON ESPACE PERSONNEL',
+                      style: FlutterFlowTheme.bodyText1.override(
+                        fontFamily: 'Poppins',
+                        fontSize: 12,
                       ),
                     ),
+                  ),
                   Container(
                     width: MediaQuery.of(context).size.width,
                     height: 157,
@@ -783,78 +784,89 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                             ),
                           ),
                         ),
-                        Container(
-                          width: MediaQuery.of(context).size.width,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.tertiaryColor,
-                          ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(10, 0, 5, 0),
-                                child: Icon(
-                                  Icons.person_pin_circle_outlined,
-                                  color: FlutterFlowTheme.primaryColor,
-                                  size: 24,
-                                ),
+                        InkWell(
+                          onTap: () async {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => CompteWidget(),
                               ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Mon compte',
-                                      style:
-                                          FlutterFlowTheme.bodyText1.override(
-                                        fontFamily: 'Poppins',
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                    ),
-                                    Text(
-                                      'Identifiant, mot de passe, coordonnées',
-                                      style:
-                                          FlutterFlowTheme.bodyText1.override(
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w300,
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Expanded(
-                                child: Align(
-                                  alignment: AlignmentDirectional(1, 0),
+                            );
+                          },
+                          child: Container(
+                            width: MediaQuery.of(context).size.width,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.tertiaryColor,
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      10, 0, 5, 0),
                                   child: Icon(
-                                    Icons.arrow_right,
-                                    color: Colors.black,
+                                    Icons.person_pin_circle_outlined,
+                                    color: FlutterFlowTheme.primaryColor,
                                     size: 24,
                                   ),
                                 ),
-                              )
-                            ],
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      5, 0, 0, 0),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Mon compte',
+                                        style:
+                                            FlutterFlowTheme.bodyText1.override(
+                                          fontFamily: 'Poppins',
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                      Text(
+                                        'Identifiant, mot de passe, coordonnées',
+                                        style:
+                                            FlutterFlowTheme.bodyText1.override(
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w300,
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Align(
+                                    alignment: AlignmentDirectional(1, 0),
+                                    child: Icon(
+                                      Icons.arrow_right,
+                                      color: Colors.black,
+                                      size: 24,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         )
                       ],
                     ),
                   ),
-                   Padding(
+                  Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(20, 10, 0, 0),
-                      child: Text(
-                        'INFORMATIONS LÉGALES',
-                        style: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Poppins',
-                          fontSize: 12,
-                        ),
+                    child: Text(
+                      'INFORMATIONS LÉGALES',
+                      style: FlutterFlowTheme.bodyText1.override(
+                        fontFamily: 'Poppins',
+                        fontSize: 12,
                       ),
                     ),
+                  ),
                   Container(
                     width: MediaQuery.of(context).size.width,
                     height: 157,
@@ -879,61 +891,61 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                                 ),
                               );
                             },
-                          child: Container(
-                            width: MediaQuery.of(context).size.width,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.tertiaryColor,
-                            ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 0, 5, 0),
-                                  child: FaIcon(
-                                    FontAwesomeIcons.binoculars,
-                                    color: FlutterFlowTheme.primaryColor,
-                                    size: 24,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      5, 0, 0, 0),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                     mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Charte de confidentialité',
-                                        style: FlutterFlowTheme.bodyText1
-                                              .override(
-                                          fontFamily: 'Poppins',
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                                Expanded(
-                                  child: Align(
-                                    alignment: AlignmentDirectional(1, 0),
-                                    child: Icon(
-                                      Icons.arrow_right,
-                                      color: Colors.black,
+                            child: Container(
+                              width: MediaQuery.of(context).size.width,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.tertiaryColor,
+                              ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        10, 0, 5, 0),
+                                    child: FaIcon(
+                                      FontAwesomeIcons.binoculars,
+                                      color: FlutterFlowTheme.primaryColor,
                                       size: 24,
                                     ),
                                   ),
-                                )
-                              ],
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        5, 0, 0, 0),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Charte de confidentialité',
+                                          style: FlutterFlowTheme.bodyText1
+                                              .override(
+                                            fontFamily: 'Poppins',
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  Expanded(
+                                    child: Align(
+                                      alignment: AlignmentDirectional(1, 0),
+                                      child: Icon(
+                                        Icons.arrow_right,
+                                        color: Colors.black,
+                                        size: 24,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
                             ),
-                          ),
                           ),
                         ),
                         Padding(
@@ -1045,30 +1057,30 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                       ],
                     ),
                   ),
-                     Align(
+                  Align(
                     alignment: AlignmentDirectional(-0.7, 0),
                     child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 5),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                         Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 5),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
                             child: Text(
-                          'CONNECTÉ AVEC ',
-                           style: FlutterFlowTheme.bodyText1.override(
+                              'CONNECTÉ AVEC ',
+                              style: FlutterFlowTheme.bodyText1.override(
                                 fontFamily: 'Poppins',
                                 fontSize: 12,
                               ),
                             ),
-                        ),
-                        Text(
-                          profilUserRecord.email,
-                          style: FlutterFlowTheme.bodyText1,
-                        )
-                      ],
-                    ),
+                          ),
+                          Text(
+                            profilUserRecord.email,
+                            style: FlutterFlowTheme.bodyText1,
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   Container(
@@ -1122,7 +1134,7 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                         ],
                       ),
                     ),
-                     ),
+                  ),
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(20, 10, 0, 40),
                     child: Text(

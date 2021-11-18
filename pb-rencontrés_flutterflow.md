@@ -46,6 +46,26 @@ Solution: Mettre des containers à la place des cards qui ne comportent pas ce p
 
 //
 
+Limage uploaded en bdd ne s'affiche pas dans le container qui l'appel.
+Edit: l'image est bien uploaded et ajouté ou remplacé à la variable; "photo_url" dans la bdd, mais elle n'apparait pas, à la la place avec un zoom intensif l'erreur; "failed to decode image data".
+
+Apparait sous Android Emulator, je pense que lochalost doit faire blocage.
+
+//
+
+Je ne peux pas tester mon projet sur l'émulateur de flutterflow vu qu'il ne fonctionne plus depuis 2 jours.
+J'ai testé d'autre projet ça fonctionne ce n'est qu'avec "Side", le projet est peut être devenu trop volumineux pour FlutterFlow, un problème de compilation paraîtrait étonnant puisque que c'est FF qui le compile lui-même.
+
+//
+
+Il n'y a pas d'option pour supprimer un compte mais seulement supprimer les données de la db de l'utilisateur, donc il pourra toujours se connecter et toute les datas et les constantes qui sont en liens avec son profil d'utilisateurs seront retournées vide.
+
+Indice: https://community.flutterflow.io/c/discuss-and-get-help/delete-user-account-with-the-delete-user-data-extension
+
+//
+
+
+
 
 
 
