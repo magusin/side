@@ -49,12 +49,13 @@ Je pense qu'une ListView serait plus adaptée.
 
 Indice: https://stackoverflow.com/questions/49480051/flutter-dart-exceptions-caused-by-rendering-a-renderflex-overflowed
 
-J'ai réarrangé la structure, mais aucun changement.
+Solution: Réarranger la structure, et assigner scroll là où c'est nécessaire même si le scroll n'est pas utile les éléments stretch donne l'erreur sans scroll sous web.
 
 //
 
 Sur la page connexion, la touche tab ne passe pas d'un textfield à l'autre sur web, mais le fait sous android.
 
+Solution: Ca c'est solutionné tout seul xD, ou je n'ai pas vu la solution.
 //
 
 Les data n'apparraissent pas dans le profil
@@ -66,6 +67,10 @@ L'erreur est plus clair avec le débugger d'android studio: "D/FirebaseAuth( 331
 Solution: Mauvais appel query du composant 'Document from Reference' et non 'Query Collection'.
 
 ![img](https://i.imgur.com/KfT5y4j.png)
+
+//
+
+
 
 
 

@@ -1,5 +1,6 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
+import '../charte_confidentialite/charte_confidentialite_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../home_page/home_page_widget.dart';
@@ -634,10 +635,8 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                       ],
                     ),
                   ),
-                  Align(
-                    alignment: AlignmentDirectional(-0.7, 0),
-                    child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 5, 0, 0),
                       child: Text(
                         'MON ESPACE PERSONNEL',
                         style: FlutterFlowTheme.bodyText1.override(
@@ -646,7 +645,6 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                         ),
                       ),
                     ),
-                  ),
                   Container(
                     width: MediaQuery.of(context).size.width,
                     height: 157,
@@ -847,10 +845,8 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                       ],
                     ),
                   ),
-                  Align(
-                    alignment: AlignmentDirectional(-0.7, 0),
-                    child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                   Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 10, 0, 0),
                       child: Text(
                         'INFORMATIONS LÉGALES',
                         style: FlutterFlowTheme.bodyText1.override(
@@ -859,7 +855,6 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                         ),
                       ),
                     ),
-                  ),
                   Container(
                     width: MediaQuery.of(context).size.width,
                     height: 157,
@@ -874,6 +869,16 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                       children: [
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 1),
+                          child: InkWell(
+                            onTap: () async {
+                              await Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      CharteConfidentialiteWidget(),
+                                ),
+                              );
+                            },
                           child: Container(
                             width: MediaQuery.of(context).size.width,
                             height: 50,
@@ -899,14 +904,15 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                                       5, 0, 0, 0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
+                                     mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         'Charte de confidentialité',
-                                        style:
-                                            FlutterFlowTheme.bodyText1.override(
+                                        style: FlutterFlowTheme.bodyText1
+                                              .override(
                                           fontFamily: 'Poppins',
                                           fontSize: 16,
                                           fontWeight: FontWeight.w600,
@@ -927,6 +933,7 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                                 )
                               ],
                             ),
+                          ),
                           ),
                         ),
                         Padding(
@@ -1038,20 +1045,30 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                       ],
                     ),
                   ),
-                  Padding(
+                     Align(
+                    alignment: AlignmentDirectional(-0.7, 0),
+                    child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 5),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        Text(
+                         Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                            child: Text(
                           'CONNECTÉ AVEC ',
-                          style: FlutterFlowTheme.bodyText1,
+                           style: FlutterFlowTheme.bodyText1.override(
+                                fontFamily: 'Poppins',
+                                fontSize: 12,
+                              ),
+                            ),
                         ),
                         Text(
                           profilUserRecord.email,
                           style: FlutterFlowTheme.bodyText1,
                         )
                       ],
+                    ),
                     ),
                   ),
                   Container(
@@ -1103,6 +1120,16 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                             ),
                           )
                         ],
+                      ),
+                    ),
+                     ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 10, 0, 40),
+                    child: Text(
+                      'SIDE.COPYKAT - VERSION 1.0.0',
+                      style: FlutterFlowTheme.bodyText1.override(
+                        fontFamily: 'Poppins',
+                        fontSize: 12,
                       ),
                     ),
                   )
