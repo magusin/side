@@ -64,6 +64,11 @@ Indice: https://community.flutterflow.io/c/discuss-and-get-help/delete-user-acco
 
 //
 
+Avec une requête querry je peux "count" le nombre d'élément dans une liste, mais je ne parviens pas à count les éléments à l'intérieur d'un élément d'une liste.
+
+//
+
+
 
 
 

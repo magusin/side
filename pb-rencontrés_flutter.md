@@ -42,8 +42,12 @@ Solution: L'entré "date_de_naissance" était déclaré comme string car sous fo
 
 //
 
-Dans la partie Profil les cards ne semblent pas scrollable sur web.
+Dans la partie Profil les cards ne semblent pas scrollable verticalement sur web.
 Je pense qu'une ListView serait plus adaptée.
+
+Edit: Après beaucoup de test le scroll est bien présent sur Android mais pas moyen sur web.
+
+//
 
 "Another exception was thrown: A RenderFlex overflowed by 158 pixels on the bottom."
 
