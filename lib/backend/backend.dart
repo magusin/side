@@ -15,6 +15,7 @@ export 'schema/serializers.dart';
 export 'schema/user_record.dart';
 export 'schema/mission_record.dart';
 
+// met a disposition les requêtes pour chaqu'une des tables de la bdd
 Stream<List<UserRecord>> queryUserRecord(
         {Query Function(Query) queryBuilder,
         int limit = -1,

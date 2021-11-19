@@ -2,6 +2,7 @@ import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../mission_detail/mission_detail_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -125,9 +126,24 @@ class _SignHomePageWidgetState extends State<SignHomePageWidget> {
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0, 0, 0, 10),
-                                        child: Container(
-                                          width:
-                                              MediaQuery.of(context).size.width,
+                                       child: InkWell(
+                                          onTap: () async {
+                                            await Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                // passage des reférences des datas pour la page mission_detail
+                                                builder: (context) =>
+                                                    MissionDetailWidget(
+                                                  missionDetail:
+                                                      missionsItem.reference,
+                                                ),
+                                              ),
+                                            );
+                                          },
+                                          child: Container(
+                                            width: MediaQuery.of(context)
+                                                .size
+                                                .width,
                                           height: 252,
                                           decoration: BoxDecoration(
                                             color: Color(0xFFE3DFDF),
@@ -390,7 +406,10 @@ class _SignHomePageWidgetState extends State<SignHomePageWidget> {
                                                                     .override(
                                                               fontFamily:
                                                                   'Poppins',
-                                                              fontSize: 12,
+                                                               fontSize: 14,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w300,
                                                             ),
                                                           ),
                                                         ),
@@ -404,9 +423,9 @@ class _SignHomePageWidgetState extends State<SignHomePageWidget> {
                                                                   .override(
                                                             fontFamily:
                                                                 'Poppins',
-                                                            fontSize: 12,
+                                                            fontSize: 14,
                                                             fontWeight:
-                                                                FontWeight.w500,
+                                                                FontWeight.normal,
                                                           ),
                                                         )
                                                       ],
@@ -417,6 +436,7 @@ class _SignHomePageWidgetState extends State<SignHomePageWidget> {
                                             ],
                                           ),
                                         ),
+                                      ),
                                       ),
                                     );
                                   },

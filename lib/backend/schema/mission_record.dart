@@ -36,6 +36,9 @@ abstract class MissionRecord
   int get salaireTotal;
 
   @nullable
+  String get lieux;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -46,7 +49,8 @@ abstract class MissionRecord
     ..entreprise = ''
     ..intitule = ''
     ..salaireHoraire = 0
-    ..salaireTotal = 0;
+    ..salaireTotal = 0
+    ..lieux = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('mission');
@@ -73,6 +77,7 @@ Map<String, dynamic> createMissionRecordData({
   String intitule,
   int salaireHoraire,
   int salaireTotal,
+  String lieux,
 }) =>
     serializers.toFirestore(
         MissionRecord.serializer,
@@ -83,4 +88,5 @@ Map<String, dynamic> createMissionRecordData({
           ..entreprise = entreprise
           ..intitule = intitule
           ..salaireHoraire = salaireHoraire
-          ..salaireTotal = salaireTotal));
+          ..salaireTotal = salaireTotal
+          ..lieux = lieux));

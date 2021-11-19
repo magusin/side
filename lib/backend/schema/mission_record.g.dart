@@ -67,6 +67,13 @@ class _$MissionRecordSerializer implements StructuredSerializer<MissionRecord> {
         ..add('salaire-total')
         ..add(serializers.serialize(value, specifiedType: const FullType(int)));
     }
+    value = object.lieux;
+    if (value != null) {
+      result
+        ..add('lieux')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
     value = object.reference;
     if (value != null) {
       result
@@ -118,6 +125,10 @@ class _$MissionRecordSerializer implements StructuredSerializer<MissionRecord> {
           result.salaireTotal = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'lieux':
+          result.lieux = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'Document__Reference__Field':
           result.reference = serializers.deserialize(value,
                   specifiedType: const FullType(
@@ -147,6 +158,8 @@ class _$MissionRecord extends MissionRecord {
   @override
   final int salaireTotal;
   @override
+  final String lieux;
+  @override
   final DocumentReference<Object> reference;
 
   factory _$MissionRecord([void Function(MissionRecordBuilder) updates]) =>
@@ -160,6 +173,7 @@ class _$MissionRecord extends MissionRecord {
       this.intitule,
       this.salaireHoraire,
       this.salaireTotal,
+      this.lieux,
       this.reference})
       : super._();
 
@@ -181,6 +195,7 @@ class _$MissionRecord extends MissionRecord {
         intitule == other.intitule &&
         salaireHoraire == other.salaireHoraire &&
         salaireTotal == other.salaireTotal &&
+        lieux == other.lieux &&
         reference == other.reference;
   }
 
@@ -191,12 +206,16 @@ class _$MissionRecord extends MissionRecord {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, dateDebut.hashCode), dateFin.hashCode),
-                            detail.hashCode),
-                        entreprise.hashCode),
-                    intitule.hashCode),
-                salaireHoraire.hashCode),
-            salaireTotal.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, dateDebut.hashCode),
+                                    dateFin.hashCode),
+                                detail.hashCode),
+                            entreprise.hashCode),
+                        intitule.hashCode),
+                    salaireHoraire.hashCode),
+                salaireTotal.hashCode),
+            lieux.hashCode),
         reference.hashCode));
   }
 
@@ -210,6 +229,7 @@ class _$MissionRecord extends MissionRecord {
           ..add('intitule', intitule)
           ..add('salaireHoraire', salaireHoraire)
           ..add('salaireTotal', salaireTotal)
+          ..add('lieux', lieux)
           ..add('reference', reference))
         .toString();
   }
@@ -248,6 +268,10 @@ class MissionRecordBuilder
   int get salaireTotal => _$this._salaireTotal;
   set salaireTotal(int salaireTotal) => _$this._salaireTotal = salaireTotal;
 
+  String _lieux;
+  String get lieux => _$this._lieux;
+  set lieux(String lieux) => _$this._lieux = lieux;
+
   DocumentReference<Object> _reference;
   DocumentReference<Object> get reference => _$this._reference;
   set reference(DocumentReference<Object> reference) =>
@@ -267,6 +291,7 @@ class MissionRecordBuilder
       _intitule = $v.intitule;
       _salaireHoraire = $v.salaireHoraire;
       _salaireTotal = $v.salaireTotal;
+      _lieux = $v.lieux;
       _reference = $v.reference;
       _$v = null;
     }
@@ -295,6 +320,7 @@ class MissionRecordBuilder
             intitule: intitule,
             salaireHoraire: salaireHoraire,
             salaireTotal: salaireTotal,
+            lieux: lieux,
             reference: reference);
     replace(_$result);
     return _$result;
