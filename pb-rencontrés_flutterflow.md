@@ -11,6 +11,7 @@ La database firestore ne semble pas prendre les 0 en début d'int, le mdp est en
 indice: https://firebaseopensource.com/projects/firebase/scrypt/ 
 
 Solution : Le mdp est déjà crypté et enregistré par google, il n'a pas besoin d'être enregistré en bdd.
+Exemple: 0789654321 pour un numéro de téléphone donne 789 654 321 comme chiffre donc logique que le 0 n'apparaisse pas.
 Les éléments de type int passés en string font correctement apparaitre les 0 en début.
 
 //
@@ -47,7 +48,7 @@ Solution: Mettre des containers à la place des cards qui ne comportent pas ce p
 //
 
 Limage uploaded en bdd ne s'affiche pas dans le container qui l'appel.
-Edit: l'image est bien uploaded et ajouté ou remplacé à la variable; "photo_url" dans la bdd, mais elle n'apparait pas, à la la place avec un zoom intensif l'erreur; "failed to decode image data".
+Edit: l'image est bien uploaded et ajouté ou remplacé à la variable; "photo_url" dans la bdd, mais elle n'apparait pas, à la place avec un zoom intensif l'erreur; "failed to decode image data".
 
 Apparait sous Android Emulator, je pense que lochalost doit faire blocage.
 
@@ -68,7 +69,13 @@ Avec une requête querry je peux "count" le nombre d'élément dans une liste, m
 
 //
 
+La tabBar sans élément contenant (si on veut rajouter quelque chose au dessus de la page par exemple) fait bugger l'application.
 
+//
+
+L'app freeze et refuse de répondre si on essaye de manipuler une TabBar et plus précisément les éléments TabBar Page qui la compose depuis le Widget Tree, il faut naviguer par Active Tab présente dans TabBar pour éviter les problèmes.
+
+//
 
 
 

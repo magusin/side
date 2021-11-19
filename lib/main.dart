@@ -7,8 +7,10 @@ import 'auth/auth_util.dart';
 
 import '../flutter_flow/flutter_flow_theme.dart';
 import 'package:side/home_page/home_page_widget.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'sign_home_page/sign_home_page_widget.dart';
+import 'mes_missions/mes_missions_widget.dart';
 import 'profil/profil_widget.dart';
 
 void main() async {
@@ -79,7 +81,7 @@ class NavBarPage extends StatefulWidget {
   _NavBarPageState createState() => _NavBarPageState();
 }
 
-/// This is the private State class that goes with NavBarPage.
+// TabBar bot.
 class _NavBarPageState extends State<NavBarPage> {
   String _currentPage = 'SignHomePage';
 
@@ -93,6 +95,7 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'SignHomePage': SignHomePageWidget(),
+      'Mes_missions': MesMissionsWidget(),
       'Profil': ProfilWidget(),
     };
     return Scaffold(
@@ -105,6 +108,14 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 24,
             ),
             label: 'Accueil',
+            tooltip: '',
+          ),
+            BottomNavigationBarItem(
+            icon: FaIcon(
+              FontAwesomeIcons.solidCalendarAlt,
+              size: 24,
+            ),
+            label: 'Mes missions',
             tooltip: '',
           ),
           BottomNavigationBarItem(
