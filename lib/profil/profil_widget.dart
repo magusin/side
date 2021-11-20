@@ -5,6 +5,7 @@ import '../compte/compte_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../home_page/home_page_widget.dart';
+import '../mon_parcours/mon_parcours_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -660,6 +661,15 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                       children: [
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 1),
+                          child: InkWell(
+                            onTap: () async {
+                              await Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => MonParcoursWidget(),
+                                ),
+                              );
+                            },
                           child: Container(
                             width: MediaQuery.of(context).size.width,
                             height: 50,
@@ -719,6 +729,7 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                                 )
                               ],
                             ),
+                          ),
                           ),
                         ),
                         Padding(

@@ -77,6 +77,16 @@ L'app freeze et refuse de répondre si on essaye de manipuler une TabBar et plus
 
 //
 
+Upload CV ne fait pas partis des fonctionnalités de flutterflow et je ne sais pas trop comment stocker des documents dans firebase.
+
+MAJ: A explorer: https://fireship.io/lessons/flutter-file-uploads-cloud-storage/
+
+//
+
+
+
+
+
 
 
 
