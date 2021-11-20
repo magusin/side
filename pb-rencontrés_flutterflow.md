@@ -83,6 +83,10 @@ MAJ: A explorer: https://fireship.io/lessons/flutter-file-uploads-cloud-storage/
 
 //
 
+Email change en bdd mais pas pour l'authentification, même problème que pour la suppression de compte, les informations présente dans FireStore Database sont manipulable mais n'impactent pas celles créé lors de l'Authentification.
+
+//
+
 
 
 

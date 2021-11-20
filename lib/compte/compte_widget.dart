@@ -159,7 +159,7 @@ class _CompteWidgetState extends State<CompteWidget> {
                                                 ),
                                                 child: Image.network(
                                                   compteUserRecord.photoUrl,
-                                                  fit: BoxFit.cover,
+                                                  fit: BoxFit.contain,
                                                 ),
                                               ),
                                             ),
@@ -457,6 +457,8 @@ class _CompteWidgetState extends State<CompteWidget> {
                                             ),
                                           ),
                                           style: FlutterFlowTheme.bodyText1,
+                                          keyboardType:
+                                              TextInputType.emailAddress,
                                         ),
                                       )
                                     ],
@@ -532,6 +534,7 @@ class _CompteWidgetState extends State<CompteWidget> {
                                             ),
                                           ),
                                           style: FlutterFlowTheme.bodyText1,
+                                          keyboardType: TextInputType.phone,
                                         ),
                                       )
                                     ],
