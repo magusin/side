@@ -121,7 +121,7 @@ class _NavBarPageState extends State<NavBarPage> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.person,
-              size: 24,
+              size: 20,
             ),
             label: 'Profil',
             tooltip: '',
