@@ -126,7 +126,7 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                         scrollDirection: Axis.horizontal,
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
@@ -145,6 +145,10 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                                       width: MediaQuery.of(context).size.width *
                                           0.8,
                                       height: 200,
+                                      constraints: BoxConstraints(
+                                        maxWidth: 300,
+                                        maxHeight: 200,
+                                      ),
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.primaryColor,
                                         borderRadius: BorderRadius.only(
@@ -240,6 +244,10 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                                       width: MediaQuery.of(context).size.width *
                                           0.8,
                                       height: 50,
+                                      constraints: BoxConstraints(
+                                        maxWidth: 300,
+                                        maxHeight: 50,
+                                      ),
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.primaryColor,
                                         borderRadius: BorderRadius.only(
@@ -313,6 +321,10 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                                       width: MediaQuery.of(context).size.width *
                                           0.8,
                                       height: 200,
+                                      constraints: BoxConstraints(
+                                        maxWidth: 300,
+                                        maxHeight: 200,
+                                      ),
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.primaryColor,
                                         borderRadius: BorderRadius.only(
@@ -394,6 +406,10 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                                       width: MediaQuery.of(context).size.width *
                                           0.8,
                                       height: 50,
+                                      constraints: BoxConstraints(
+                                        maxWidth: 300,
+                                        maxHeight: 50,
+                                      ),
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.primaryColor,
                                         borderRadius: BorderRadius.only(
@@ -467,6 +483,10 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                                       width: MediaQuery.of(context).size.width *
                                           0.8,
                                       height: 200,
+                                      constraints: BoxConstraints(
+                                        maxWidth: 300,
+                                        maxHeight: 200,
+                                      ),
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.primaryColor,
                                         borderRadius: BorderRadius.only(
@@ -547,6 +567,10 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                                       width: MediaQuery.of(context).size.width *
                                           0.8,
                                       height: 50,
+                                      constraints: BoxConstraints(
+                                        maxWidth: 300,
+                                        maxHeight: 50,
+                                      ),
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.primaryColor,
                                         borderRadius: BorderRadius.only(
@@ -656,6 +680,7 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                             ),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
@@ -940,6 +965,7 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                           ),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Padding(
                                 padding:
@@ -1139,6 +1165,7 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Padding(
                               padding:
