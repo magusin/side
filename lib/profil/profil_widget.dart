@@ -3,13 +3,11 @@ import '../backend/backend.dart';
 import '../charte_confidentialite/charte_confidentialite_widget.dart';
 import '../compte/compte_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
 import '../home_page/home_page_widget.dart';
 import '../mon_parcours/mon_parcours_widget.dart';
 import '../preferences/preferences_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class ProfilWidget extends StatefulWidget {
   ProfilWidget({Key key}) : super(key: key);

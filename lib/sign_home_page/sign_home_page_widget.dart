@@ -1,12 +1,10 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
 import '../main.dart';
 import '../mission_detail/mission_detail_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SignHomePageWidget extends StatefulWidget {
   SignHomePageWidget({Key key}) : super(key: key);
