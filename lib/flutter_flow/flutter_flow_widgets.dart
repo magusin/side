@@ -79,7 +79,7 @@ class FFButtonWidget extends StatelessWidget {
       return Container(
         height: options.height,
         width: options.width,
-        child: RaisedButton.icon(
+        child: ElevatedButton.icon(
           icon: Padding(
             padding: options.iconPadding ?? EdgeInsets.zero,
             child: icon ??
@@ -91,17 +91,14 @@ class FFButtonWidget extends StatelessWidget {
           ),
           label: textWidget,
           onPressed: loading ? () {} : onPressed,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(options.borderRadius),
-            side: options.borderSide ?? BorderSide.none,
+          style: ButtonStyle(
+            shape: MaterialStateProperty.all(
+                RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(options.borderRadius),
+                side: options.borderSide ?? BorderSide.none,
+              )
+            ),
           ),
-          color: options.color,
-          colorBrightness: ThemeData.estimateBrightnessForColor(options.color),
-          textColor: options.textStyle.color,
-          disabledColor: options.disabledColor,
-          disabledTextColor: options.disabledTextColor,
-          elevation: options.elevation,
-          splashColor: options.splashColor,
         ),
       );
     }
@@ -109,19 +106,16 @@ class FFButtonWidget extends StatelessWidget {
     return Container(
       height: options.height,
       width: options.width,
-      child: RaisedButton(
+      child: ElevatedButton(
         onPressed: onPressed,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(options.borderRadius ?? 28),
-          side: options.borderSide ?? BorderSide.none,
+        style: ButtonStyle(
+          shape: MaterialStateProperty.all(
+            RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(options.borderRadius ?? 28),
+                side: options.borderSide ?? BorderSide.none,
+              )
+          ),
         ),
-        textColor: options.textStyle.color,
-        color: options.color,
-        colorBrightness: ThemeData.estimateBrightnessForColor(options.color),
-        disabledColor: options.disabledColor,
-        disabledTextColor: options.disabledTextColor,
-        padding: options.padding,
-        elevation: options.elevation,
         child: textWidget,
       ),
     );
